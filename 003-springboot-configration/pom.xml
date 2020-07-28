@@ -58,6 +58,26 @@
     </dependencies>
 
     <build>
+
+        <!--
+            Springboot项目默认推荐使用的前端引擎是thymeleaf，
+            现在我们要使用springboot集成jsp，手动指定jsp最后编译的路径
+            而且springboot集成jsp编译jsp路径是springboot规定好的位置
+            META-INF/resource
+        -->
+        <resources>
+            <resource>
+                <!--源文件-->
+                <directory>src/main/webapp</directory>
+                <!--指定编译到META-INF/resources-->
+                <targetPath>META-INF/resources</targetPath>
+                <!--指定源文件夹中哪个资源需要编译-->
+                <includes>
+                    <include>*.*</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

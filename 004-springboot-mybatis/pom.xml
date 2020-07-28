@@ -8,14 +8,14 @@
         <version>2.3.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.ly.springboot</groupId>
-    <artifactId>002-springboot-multi-environment</artifactId>
+    <groupId>com.ly.springboot-project</groupId>
+    <artifactId>004-springboot-mybatis</artifactId>
     <version>1.0.0</version>
-    <name>002-springboot-multi-environment</name>
+    <name>004-springboot-mybatis</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>14</java.version>
     </properties>
 
     <dependencies>
@@ -34,6 +34,17 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!--添加oracle驱动-->
+        <dependency>
+            <groupId>com.oracle.ojdbc</groupId>
+            <artifactId></artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId></groupId>
+            <artifactId></artifactId>
         </dependency>
     </dependencies>
 

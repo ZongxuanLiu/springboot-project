@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class IndexController {
 
     @RequestMapping(value = "/say")
-    public @ResponseBody String say(){
+    public @ResponseBody
+    String say() {
         return "hello multiple SpringBoot!";
     }
 
