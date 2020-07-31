@@ -18,6 +18,22 @@
         <java.version>14</java.version>
     </properties>
 
+    <repositories>
+        <!--        <repository>-->
+        <!--            <id>public</id>-->
+        <!--            <url>http://172.16.0.13:8081/nexus/content/groups/public/</url>-->
+        <!--        </repository>-->
+        <repository>
+            <id>aliMaven</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>public</id>
+            <url>http://61.164.40.36:10082/nexus/content/groups/public/</url>
+        </repository>
+
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,13 +54,9 @@
 
         <!--添加oracle驱动-->
         <dependency>
-            <groupId>com.oracle.ojdbc</groupId>
-            <artifactId></artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc14</artifactId>
+            <version>10.2.0.4.0</version>
         </dependency>
     </dependencies>
 
