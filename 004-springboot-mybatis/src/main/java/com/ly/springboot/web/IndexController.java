@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.math.BigDecimal;
+
 /**
  * @author ly
  * @date: 2020/8/4 14:43
@@ -14,16 +16,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @company:zjhcsoft
  * @description:
  */
-@Controller
+@Controller(value = "/sys")
 public class IndexController {
-@Autowired
+    @Autowired
     private SysModelTreeService modelTreeService;
 
-    @RequestMapping(value = "modelById")
-    public @ResponseBody ModelTree queryModelById(){
+    @RequestMapping(value = "/modelById")
+    public @ResponseBody ModelTree queryModelById(BigDecimal id){
 
-
-        return new ModelTree();
+        ModelTree modelTree = modelTreeService.getSysModelById(id);
+        return modelTree;
     }
 
 
